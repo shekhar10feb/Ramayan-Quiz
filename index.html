@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="heading">
+                <h1><a href="./index.html">Ramayana Quiz</a></h1>
+            </div>
+            <div class="about">
+                <h3><a href="./about.html">About</a></h3>
+            </div>
+        </nav>
+        <div class="main">
+            <div id="box">
+                <h2 id='quesBox'>This is the dummy question.</h2>
+                <div class="row">
+                    <input class="options" id="option1" type="radio" value="a" name="option" />
+                    <label for="option1">Option 1</label>
+                </div>
+                <div class="row">
+                    <input class="options" id="option2" type="radio" value="b" name="option" />
+                    <label for="option2">Option 2</label>
+                </div>
+                <div class="row">
+                    <input class="options" id="option3" type="radio" value="c" name="option" />
+                    <label for="option3">Option 3</label>
+                </div>
+                <div class="row">
+                    <input class="options" id="option4" type="radio" value="d" name="option" />
+                    <label for="option4">Option 4</label>
+                </div>
+                <button class="btn" onclick="submitQuiz()">Next</button>
+            </div>
+        </div>
+        <div class="sponsoredBy">
+            <h3>Sponsored By: <a href="https://www.marsmanufacturers.com">Mars Manufacturers</a></h3>
+        </div>
+    </div>
+    <script src="./js/behave.js"></script>
+</body>
+</html>

@@ -53,7 +53,7 @@ let MCQS = [
         choice2: "जटायु",
         choice3: "धृतराष्ट्",
         choice4: "जाम्बवान्",
-        answer: 2
+        answer: 1
     },
     {
         question: "रावण निम्नलिखित में से किस भगवान का भक्त था?",
@@ -75,8 +75,8 @@ let MCQS = [
         question: "उस शिव के धनुष का नाम क्या था, जिस राम ने तोड़ा था?",
         choice1: "आनंदक ",
         choice2: "पिनाका",
-        choice3: "पिनाका",
+        choice3: "पिंडाका",
         choice4: "पिंडका",
-        answer: 2
+        answer: 1
     },
     ];

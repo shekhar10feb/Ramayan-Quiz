@@ -1,0 +1,441 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 3vmin;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: rgb(1, 170, 38);
+}
+
+#container {
+    height: auto;
+    width: auto;
+    display: grid;
+    place-items: center;
+}
+
+/* Navigation Bar */
+.nav {
+    width: 100%;
+    min-height: 4rem;
+    background-color: rgb(2, 136, 31);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+h1 a, h3 a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Start Section */
+#start {
+    height: 4rem;
+    width: 13rem;
+    padding: 1rem;
+    background-color: #e7f1fa;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#start:hover {
+    background: #ff5235;
+    background: rgb(2, 136, 31);
+    color: #e7f1fa;
+    border: 2px solid #b0c4d8;
+}
+
+/* Guide Section */
+#guide, #quiz {
+    height: auto;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: rgb(2, 136, 31);
+    border: 1px solid #b0c4d8;
+    border-radius: 1rem;
+    display: none;
+}
+
+#guide h2 {
+    width: 100%;
+    font-size: 2.2rem;
+    color: #fff;
+    text-align: left;
+}
+
+#guide h4 {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+#guide #button {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#guide #button button {
+    height: 3rem;
+    width: 7rem;
+    margin: 10px 25px;
+    border: none;
+    outline: none;
+    color: #000;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+#guide #button button:last-child {
+    margin: 10px 0;
+}
+
+#guide #button button:hover {
+    background: rgb(1, 170, 38);
+    color: #fff;
+    border: 1px solid #b0c4d8;
+
+}
+
+#quiz {
+    width: 32rem;
+    min-height: 24rem;
+    background: #fff;
+    position: relative;
+    margin-top: 2rem;
+}
+
+#quiz #quiz_header {
+    width: 100%;
+    height: 3.5rem;
+    background-color: rgb(213, 249, 220);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 1rem 1rem 0 0;
+}
+
+#quiz #quiz_header h5 {
+    font-size: 2rem;
+    margin: 0 20px;
+    color: rgb(2, 136, 31);
+}
+
+#quiz #quiz_header #timer {
+    height: 3rem;
+    width: 45%;
+    background: rgb(2, 136, 31);
+    color: #e7f1fa;
+    border: 1px solid #b0c4d8;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    right: 10px;
+}
+
+#quiz #quiz_header #timer h6 {
+    font-size: 1.1rem;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    margin: 0 10px;
+}
+
+#quiz #quiz_header #timer #time {
+    height: 2.2rem;
+    width: 17%;
+    color:rgb(1, 170, 38);
+    background: #fff;
+    border: 1px solid #b0c4d8;
+    border-radius: 10px;
+    margin: 0 0 0 1rem;
+}
+
+/* Quiz Questions */
+#quiz #question {
+    width: 90%;
+    height: 4rem;
+    position: absolute;
+    top: 4.2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#quiz #question h2 {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+#quiz #question h2:first-child {
+    margin: 0 10px 0 5px;
+}
+
+/* Quiz Options */
+#quiz #optionList {
+    height: 11rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    top: 8.4rem;
+}
+
+#quiz #optionList h4 {
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgb(2, 136, 31);
+    line-height: 50px;
+    margin: 5px 0;
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    overflow: hidden;
+    border: 1px solid #b0c4d8;
+    cursor: pointer;
+}
+
+#quiz #optionList h4:hover {
+    background: #e91e3a;
+}
+
+#quiz #optionList .active {
+    background: #e91e3a;
+}
+
+#quiz #optionList .disabled {
+    pointer-events: none;
+}
+
+/* Answers Section */
+#quiz #answersSection {
+    height: 4rem;
+    width: 100%;
+    background: rgb(213, 249, 220);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px 0;
+    border-radius: 0 0 1rem 1rem;
+}
+
+#quiz #answersSection h3 {
+    color: #6a6868;
+    margin: 0 30px;
+}
+
+#quiz #answersSection h3:last-child {
+    width: 8rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    background: rgb(2, 136, 31);
+    position: absolute;
+    right: 0;
+    color: #e7f1fa;
+    border: 1px solid #b0c4d8;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+#quiz #answersSection h3:hover {
+    background: #e91e3a;
+}
+
+#quiz #answersSection h3:first-child:hover {
+    background: none;
+}
+
+/* Result Section */
+#container #result {
+    height: 22rem;
+    width: 25rem;
+    background: #e7f1fa;
+    background-image: radial-gradient(#fff, #e7f1fa, #dbdddf);
+    border-radius: 10px;
+    border: 1px solid #b0c4d8;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+
+#container #result .fa-trophy {
+    width: 100%;
+    font-size: 8rem;
+    color: goldenrod;
+    position: absolute;
+    top: 1.2rem;
+    text-align: center;
+}
+
+#container #result .star1 {
+    font-size: 1rem;
+    color: goldenrod;
+    position: absolute;
+    top: 1rem;
+    left: 7rem;
+    text-align: center;
+}
+
+#container #result .star2 {
+    font-size: 1.5rem;
+    color: goldenrod;
+    position: absolute;
+    top: 2.3rem;
+    right: 5rem;
+    text-align: center;
+}
+
+#container #result .star3 {
+    font-size: 2rem;
+    color: goldenrod;
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    text-align: center;
+}
+
+#container #result h6 {
+    width: 100%;
+    font-size: 1.2rem;
+    color: #000;
+    position: absolute;
+    text-align: center;
+    top: 9.5rem;
+}
+
+#container #result #points {
+    font-size: 1.5rem;
+    position: absolute;
+    text-align: center;
+    top: 11.5rem;
+}
+
+#container #result #quitAndStartAgainButtons {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 14rem;
+}
+
+#container #result button {
+    height: 2.5rem;
+    width: 8rem;
+    border: none;
+    outline: none;
+    background: rgb(2, 136, 31);
+    color: #e7f1fa;  
+    left: 105px;
+    border: 1px solid #b0c4d8;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#container #result button:last-child {
+    top: 405px;
+}
+
+#container #result button:hover {
+    background: #e91e6a;
+}
+
+footer {
+    width: 100%;
+    min-height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom: 0.5rem;
+}
+
+footer h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #fff;
+}
+
+h2 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0.4rem;
+    background: #fff;
+    padding: 0.2rem 1rem;
+    text-decoration: none;
+}
+
+h2 a:link, h2 a:visited, h2 a:active {
+    color:rgb(1, 170, 38);
+    color: #000;
+}
+
+a p {
+    width: 100%;
+    font-size: 0.5rem;
+    text-align: right;
+}
+

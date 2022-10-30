@@ -4,45 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Rmayana Quiz App | Official Site</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+
+    <!-- fontawesome CDN link for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/index.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Container -->
+    <div id="container">
+
+        <!-- Navbar -->
         <nav class="nav">
             <div class="heading">
-                <h1><a href="./index.html">Ramayana Quiz</a></h1>
+                <h1><a href="./index.html">रामायण प्रश्नोत्तरी</a></h1>
             </div>
             <div class="about">
-                <h3><a href="./about.html">About</a></h3>
+                <h3><a href="./about.html">विषय</a></h3>
             </div>
         </nav>
-        <div class="main">
-            <div id="box">
-                <h2 id='quesBox'>This is the dummy question.</h2>
-                <div class="row">
-                    <input class="options" id="option1" type="radio" value="a" name="option" />
-                    <label for="option1">Option 1</label>
-                </div>
-                <div class="row">
-                    <input class="options" id="option2" type="radio" value="b" name="option" />
-                    <label for="option2">Option 2</label>
-                </div>
-                <div class="row">
-                    <input class="options" id="option3" type="radio" value="c" name="option" />
-                    <label for="option3">Option 3</label>
-                </div>
-                <div class="row">
-                    <input class="options" id="option4" type="radio" value="d" name="option" />
-                    <label for="option4">Option 4</label>
-                </div>
-                <button class="btn" onclick="submitQuiz()">Next</button>
+
+        <!-- Start Section -->
+        <div id="start">शुरू करें</div>
+
+        <!-- Guide Section -->
+        <div id="guide">
+            <h2>प्रश्नोत्तरी गाइड</h2>
+            <h4>1. प्रत्येक प्रश्न के लिए आपके पास केवल 20 सेकंड हैं।</h4>
+            <h4>2. एक बार जब आप अपना उत्तर चुन लेते हैं, तो इसे पूर्ववत नहीं किया जा सकता है।</h4>
+            <h4>3. आपके सही उत्तरों के आधार पर आपको अंक मिलेंगे।</h4>
+            <h4>4. जब आप खेल रहे हों तो आप प्रश्नोत्तरी से बाहर नहीं निकल सकते।</h4>
+
+            <div id="button">
+                <button id="exit">बाहर</button>
+                <button id="continue">जारी रखें</button>
             </div>
         </div>
-        <div class="sponsoredBy">
-            <h3>Sponsored By: <a href="https://www.marsmanufacturers.com">Mars Manufacturers</a></h3>
+
+        <!-- Quiz Section -->
+        <div id="quiz">
+            <div id="quiz_header">
+                <h5>प्रश्नोत्तरी ऐप</h5>
+                <div id="timer">
+                    <h6>शेष समय</h6>
+                    <h6 id="time">00</h6>
+                </div>
+            </div>
+
+            <!-- Quiz Questions -->
+            <div id="question">
+                <h2 id="questionNo"></h2>
+                <h2 id="questionText"></h2>
+            </div>
+
+            <!-- Quiz Choices -->
+            <div id="optionList">
+                <h4 class="choice_que" id="option1"></h4>
+                <h4 class="choice_que" id="option2"></h4>
+                <h4 class="choice_que" id="option3"></h4>
+                <h4 class="choice_que" id="option4"></h4>
+            </div>
+
+            <!-- Answers Section -->
+            <div id="answersSection">
+                <h3 id="total_correct"></h3>
+                <h3 id="next_question">अगला</h3>
+            </div>
+
         </div>
+
+        <!-- Result Section -->
+        <div id="result">
+            <i class="fas fa-trophy"></i>
+            <i class="fas fa-star star1"></i>
+            <i class="fas fa-star star2"></i>
+            <i class="fas fa-star star3"></i>
+            <h6>आपने प्रश्नोत्तरी पूरी कर ली है!</h6>
+            <h6 id="points"></h6>
+            <div id="quitAndStartAgainButtons">
+                <button id="quit">निकास</button>
+                <button id="startAgain">फिर से शुरू करें</button>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <h2>Sponsored by: <a href="http://www.marsmanufacturers.com" target="_blank">MARS MANUFACTURERS <p>It is a venture of LED-based Products</p></a></h2>
+        </footer>
     </div>
-    <script src="./js/behave.js"></script>
+
+    <script src="./js/questions.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
